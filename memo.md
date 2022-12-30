@@ -13,10 +13,17 @@ double(4);
 >>8
 
 
-・取得
+//取得
 ターゲット.addEventListener(イベント名, 関数)
 
 form.addEventListener("submit",
 function () {
     console.log();
 })
+
+
+//リストを取得する
+const lists = document.querySelectorAll("li");
+lists[0].innerText
+>>'test'
+
