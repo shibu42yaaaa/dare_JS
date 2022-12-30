@@ -30,6 +30,15 @@ function add(todo) {
     const li = document.createElement("li");
     li.innerText = todoText;
     li.classList.add("list-group-item");
+    // 右クリックした時に削除する
+    li.addEventListener("contextmenu", function(event){
+        //処理内容
+          // デフォルトの右クリアクションを禁止する
+        event.preventDefault();
+        li.remove();
+        saveData();
+    });
+
     ul.appendChild(li);
     input.value = ("");
     saveData();
