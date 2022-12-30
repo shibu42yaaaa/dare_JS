@@ -11,7 +11,7 @@ form.addEventListener("submit", function (event) {
 
 function add() {
   let todoText = input.value;
-  if (todoText.length > 0) {
+  if (todoText) {
     const li = document.createElement("li");
     li.innerText = todoText;
     li.classList.add("list-group-item");
